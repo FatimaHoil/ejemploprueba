@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Helvetica;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+.ancho {
+  width: 1200px;
+  margin: auto;
+  border: 1px red solid;
+}
+.margen {
+  padding: 15px;
+}
+.centrar {
+  text-align: center;
+}
+.contenedor_imagen {
+  border-top: 15px solid #e7950b;
+  background-color: #041237;
+  width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.contenedor_titulo {
+  background-color: #f5f7fa;
+  width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 26px;
+  color: #005677;
+  font-weight: bold;
+}
+
+hr {
+  width: 50px;
+  height: 6px;
+  background-color: red;
+  margin: auto;
+}
+
+.contenedor_de_formulario {
+  border: 2px solid #005677;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: white;
+  text-align: center;
+}
+
+.parrafo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 26px;
+  color: #e7950b;
+  font-weight: bold;
+}
+
+.contenedor1 {
+  padding: 15px;
+  width: 590px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contenedor1 input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+}
+.contenedor1 p {
+  margin-bottom: 12px;
+  text-align: right;
+}
+.contenedor2 {
+  padding: 15px;
+  width: 590px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contenedor2 input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+}
+
+.contenedor2 select {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+}
+
+.contenedor2 select:focus {
+  border-color: blue;
+  border: 3px solid blue;
+  outline: none;
+}
+
+.contenedor_radio label {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.contenedor_radio input[type="radio"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.contenedor2 textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  overflow: hidden; /* Oculta las barras de scroll */
+  height: 200px;
+  resize: none;
+}
+
+.contenedor2 button {
+  background-color: #800000;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.contenedor_boton {
+  width: 1200px;
+  margin: auto;
+  text-align: left;
+}
+
+.btn_enviar {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  width: 100%;
+  max-width: 580px; /* máximo ancho para que no sea excesivamente grande */
+  text-align: center;
+  cursor: pointer;
+  margin-left: 15px;
+  border-radius: 15px;
+}
+.cabecera_ligera h2 {
+  color: #005677;
+  font-size: 70px;
+  margin: 0;
+  text-align: center;
+  position: relative;
+}
+
+.contenedor_nombre {
+  background-color: #041237;
+  padding: 30px;
+  margin: auto;
+  font-weight: bold;
+  font-size: 20px;
+  width: 1200px;
+  color: white;
+  text-align: center;
+  line-height: 1.5;
+}

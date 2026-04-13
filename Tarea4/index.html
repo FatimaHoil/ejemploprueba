@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad4</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <div class="contenedor_imagen">
+      <img src="images/logo_cabecera.png" alt="logo caja sagrada familia" />
+    </div>
+    <div class="contenedor_titulo">
+      <br />
+      <h1>DÉJANOS CONOCERTE</h1>
+      <br />
+      <hr />
+    </div>
+    <br /><br />
+    <div class="contenedor_de_formulario">
+      <br />
+      <h2>¡Compártenos tu información!</h2>
+      <br />
+      <p class="parrafo">
+        Déjanos tus datos personales y nosotros nos comunicaremos contigo lo más
+        pronto posible.
+      </p>
+      <br />
+      <form action="loquesea.html" method="post" name="formulariovalidacion">
+        <div class="contenedor1">
+          <input
+            type="text"
+            placeholder="Nombre Completo *"
+            name="nombre"
+            id="nombrecompleto"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Correo Electrónico *"
+            name="correo"
+            id="correo"
+            required
+          />
+          <input
+            type="tel"
+            placeholder="Celular *"
+            name="celular"
+            id="celular"
+            required
+          />
+          <input type="text" placeholder="Ciudad" name="ciudad" id="ciudad" />
+          <input
+            type="text"
+            placeholder="Localidad"
+            name="localidad"
+            id="localidad"
+          />
+        </div>
+
+        <div class="contenedor2">
+          <input type="text" placeholder="Estado" name="estado" id="estado" />
+          <input
+            type="text"
+            placeholder="Colonia"
+            name="colonia"
+            id="colonia"
+          />
+
+          <select name="area" id="areaint" required>
+            <option value="">Elige tu área de interés *</option>
+            <option value="1">Cajas</option>
+            <option value="2">Servicios</option>
+            <option value="3">Asesoramiento Financiero</option>
+            <option value="4">Gestoría y Cobranza</option>
+            <option value="5">Crédito</option>
+            <option value="6">Jurídico</option>
+            <option value="7">Archivo</option>
+            <option value="8">Mercadotecnía</option>
+            <option value="9">Diligencias</option>
+            <option value="10">Compras</option>
+            <option value="11">Intendencia</option>
+            <option value="12">Auditoría</option>
+            <option value="13">Capital Humano</option>
+            <option value="14">Mantenimiento</option>
+            <option value="15">Sistemas</option>
+            <option value="16">Contabilidad</option>
+            <option value="17">Administración</option>
+          </select>
+
+          <div class="contenedor_radio">
+            <div class="contenedor_radio">
+              <label
+                ><input
+                  type="radio"
+                  name="tipo_persona"
+                  value="fisica"
+                  checked
+                />
+                Persona Física</label
+              >
+              <label
+                ><input type="radio" name="tipo_persona" value="moral" />
+                Persona Moral</label
+              >
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="contenedor_boton">
+          <button type="submit" id="btn_enviar" class="btn_enviar">
+            Enviar
+          </button>
+        </div>
+        <br /><br /><br />
+      </form>
+    </div>
+
+    <script>
+      $("#btn_enviar").click(function () {
+        if ($("#nombrecompleto").val().trim() === "") {
+          alert("Escribe tu nombre completo");
+          $("#nombrecompleto").focus();
+          return false;
+        }
+
+        var email = $("#correo").val().trim();
+        if (email === "" && email.indexOf("@") === -1) {
+          alert("El correo debe contener '@' y no puede estar vacío");
+          $("#correo").focus();
+          return false;
+        }
+
+        if ($("#celular").val().trim() === "") {
+          alert("Escribe tu número de celular");
+          $("#celular").focus();
+          return false;
+        }
+
+        if (!$("input[name='tipo_persona']:checked").length) {
+          alert("Selecciona el tipo de persona");
+          return false;
+        }
+
+        if ($("#areaint").val() === "") {
+          alert("Debes SELECCIONAR UNA OPCIÓN del área de interés");
+          $("#areaint").focus();
+          return false;
+        }
+
+        document.getElementById("formulariovalidacion").submit();
+      });
+    </script>
+    <br />
+    <div class="contenedor_nombre">
+      <p>Fatima Sarahi Hoil Couoh</p>
+      <p>7SB</p>
+      <p>Programación Web</p>
+    </div>
+  </body>
+</html>
